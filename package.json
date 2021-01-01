@@ -27,7 +27,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "gun": "^0.2020.520",
-    "highlight.js": "^9.18.5",
+    "highlight.js": "^10.5.0",
     "ipfs": "^0.52.3",
     "ipfs-http-client": "^47.0.1",
     "marked": "^0.7.0",
