@@ -5,14 +5,17 @@
   "private": true,
   "author": "Esteban Fuster Pozzi <estebanrfp@gmail.com>",
   "scripts": {
-    "start": "npm run watch",
-    "build": "rimraf dist && webpack --config ./webpack.prod.js --progress --colors",
-    "dist": "rimraf dist && webpack --config ./webpack.prod.js --progress --colors",
-    "dev": "rimraf dev && webpack -d --config ./webpack.dev.js --progress --colors",
-    "watch": "npx webpack-dev-server --config ./webpack.dev.js --inline --progress --colors --port 3000",
+    "build": "rimraf dist/ && webpack --mode production",
+    "dev": "rimraf dist/ && webpack --mode development --watch",
+    "server": "node ./server.js",
+    "start": "http-server --port 3000 contentBase dist",
     "test": "jest"
   },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/estebanrfp/dinamical/issues"
+  },
+  "homepage": "https://github.com/estebanrfp/dinamical#readme",
   "repository": "git@github.com:estebanrfp/dinamical.git",
   "standard": {
     "parser": "babel-eslint"
@@ -46,14 +49,6 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "7.7.5",
-    "@babel/plugin-proposal-optional-chaining": "7.7.5",
-    "@babel/plugin-proposal-pipeline-operator": "7.7.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/polyfill": "7.7.0",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/register": "^7.12.10",
     "autoprefixer": "^9.8.6",
     "babel-eslint": "10.0.3",
     "babel-loader": "^8.2.2",
@@ -62,9 +57,9 @@
     "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "^2.3.0",
     "compression-webpack-plugin": "^6.1.1",
-    "copy-webpack-plugin": "^5.1.2",
+    "copy-webpack-plugin": "7.0.0",
     "css-loader": "^3.6.0",
-    "eslint": "^7.16.0",
+    "eslint": "7.18.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
@@ -73,23 +68,20 @@
     "extract-css-chunks-webpack-plugin": "^4.9.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-loader": "^1.3.2",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "5.0.0-beta.5",
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^0.8.2",
-    "offline-plugin": "^5.0.7",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "pug-loader": "^2.4.0",
     "style-loader": "^1.3.0",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
-    "terser-webpack-plugin": "^2.3.8",
-    "ts-loader": "^8.0.13",
+    "terser-webpack-plugin": "5.1.1",
+    "ts-loader": "8.0.14",
     "typescript": "^4.1.3",
-    "webpack": "^5.11.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-middleware": "^3.7.3",
-    "webpack-dev-server": "^3.11.1",
-    "webpack-manifest-plugin": "^2.2.0",
-    "webpack-merge": "^4.2.2"
+    "webpack": "5.15.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "3.11.2",
+    "webpack-manifest-plugin": "^3.0.0",
+    "workbox-webpack-plugin": "6.0.2"
   }
 }
