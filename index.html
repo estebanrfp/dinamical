@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>desarrolloactivo.com</title>
+
+  <meta name="description" content="" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="theme-color" content="#999999" />
+
+  <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/estebanrfp/static-assets/master/images/favicon.ico" />
+  <!-- <link rel="manifest" href="/manifest.json" /> -->
+</head>
+
+<body>
+  <span id="pageMessages"></span>
+  <span class="spinner"></span>
+
+  <main class="app-container">
+    <input id="show-menu-button" type="checkbox" />
+    <label for="show-menu-button" class="show-menu-label">
+      <span>Menu</span>
+    </label>
+
+    <div id="search">
+      <input id="searchinput" class="search-box" autoComplete="off" />
+      <span class="zmdi zmdi-search" />
+    </div>
+
+    <section class="main-container">
+      <section class="Layout"></section>
+      <section class="Sidebar-left"></section>
+    </section>
+
+    <div id="floatingMenu" />
+  </main>
+  <script src="/sw.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
