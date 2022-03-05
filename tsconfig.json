@@ -4,13 +4,18 @@
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "commonjs",
-    "target": "es5",
+    // "target": "es5",
     "importHelpers": true,
     "allowJs": true,
     "pretty": true,
+    // "lib": ["ESNext", "DOM", "WebWorker"],
     "paths": {
       "core/*": ["components/*"]
     }
   },
-  "exclude": ["node_modules", "OLD"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "test"
+  ]
 }

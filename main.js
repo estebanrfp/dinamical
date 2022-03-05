@@ -8,7 +8,7 @@ const updateSW = registerSW({
     console.log('New content available, click on reload button to update.')
   },
   onOfflineReady () {
-    console.log('show a ready to work offline to user')
+    console.log('show a ready to work offline to user :-)')
     // show a ready to work offline to user
   }
 })
